@@ -1,0 +1,225 @@
+:root{
+    --font-color:#FFFFFF;
+    --button-color:#9332BD;
+    --button-dark-color: #6e258d;
+    --box-shadow: #dddddd;
+    --heading-color:#201F20;
+    --card: #646464;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 5px;
+    padding: 10px;
+}
+
+body{
+    background-color: rgb(238, 233, 233);
+}
+
+.LoginText{
+    color: var(--font-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.SignUpText{
+    color: var(--font-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo{
+    margin: 0px 0px 0px 35px;
+    width: 120px;
+    height: 120px;
+}
+
+.LoginBtn{
+    text-align: center;
+    padding: 25px;
+    display: block;
+    font-family: Verdana;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 20px;
+    width: 700px;
+    background-color: var(--button-color);
+    color: var(--font-color);
+    border: 0px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+}
+
+.LoginBtn:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+    background-color: var(--button-dark-color);
+}
+
+.SignUpBtn{
+    text-align: center;
+    padding: 25px;
+    display: block;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 20px;
+    width: 700px;
+    background-color: var(--button-color);
+    color: var(--font-color);
+    border: 0px;
+    margin: 0 auto;
+}
+
+.SignUpBtn:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+    background-color: var(--button-dark-color);
+}
+
+button{
+    text-align: center;
+}
+
+
+a{
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+  }
+  
+  nav ul li {
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+
+  nav li a:hover {
+    border-bottom: 1px solid white;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 30px 0px 30px;
+    width: 100%;
+  }
+
+  .card{
+    width: 90%;
+    text-align: center;
+    height: 700px;
+    margin: 0 auto;
+    margin-left: 100px;
+    margin-top: 15px;
+    border: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    background-color: var(--heading-color);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+  }
+
+  nav button{
+    border-radius: 10px 10px 10px 0px;
+    border: 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 80px;
+    background-color: var(--button-color);
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+    margin: 0px 30px 0px 150px;
+
+  }
+
+  nav button:hover{
+    background-color: var(--button-dark-color);
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 80px;
+  }
+
+  .GridElement1{
+    grid-column: 1;
+  }
+
+  .GridElement2{
+    grid-column: 2;
+  }
+
+  .grid h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--button-color);
+  }
+
+  .grid p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--font-color);
+    margin-left: 30px;
+    text-align: left;
+  }
+
+  .grid button{
+    display: flex;
+    margin: 0 auto;
+    background-color: var(--button-color);
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 10px 10px 10px 0px;
+    border: 0;
+    margin-top: 40px;
+    margin-left: 30px;
+  }
+
+  .grid button:hover{
+    background-color: var(--button-dark-color);
+  }
+
+  .grid img{
+    margin: -170px 30px 0px;
+    border-radius: 2px;
+  }
+
+  .grid a{
+    text-decoration: none;
+    color: white;
+  }

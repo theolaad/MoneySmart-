@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up | MoneySmart</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/signUp.css">
+    <link rel="icon" href="images/MoneySmartImage.png">
+</head>
+<body>
+<div class="container">
+    <div class="card">
+      <h1>Sign Up</h1>
+      <form action="SignUp.php" method="post" class="form" id="form">
+        <div class="input-group">
+          <div id="message"></div>
+          <div class="input-field" id="nameField">
+            <i class="fa fa-user"></i>
+            <input type="text" placeholder="Name" name="name" id="name" autocomplete="off">
+          </div>
+
+          <div class="input-field">
+            <i class="fa fa-envelope"></i>
+            <input type="email" placeholder="Email address" name="email" id="email" autocomplete="off">
+          </div>
+
+          <div class="input-field">
+            <i class="fa fa-lock"></i>
+            <input type="password" placeholder="Password" name="password" id="password">
+          </div>
+          <a href="ForgotPassword.html"><p class="forgot">Forgot Password</p></a>
+        </div>
+        <div class="btn-field">
+          <button type="submit" class="able" id="signupBtn">Sign Up</button>
+        </div>
+        <p>Already have an account? <a href="Login.html">Log in</a></p>
+      </form>
+    </div>
+</div>
+
+<script>
+  let signupBtn = document.getElementById("signupBtn");
+  let nameField = document.getElementById("nameField");
+  let title = document.getElementById("title");
+
+  
+  // Function to check if email is valid
+function isValidEmail(email) {
+  // Add email validation logic
+  // For example, you can use a regular expression pattern
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+// Function to check if password is valid
+function isValidPassword(password) {
+  // Add password validation logic
+  // For example, check for minimum length, number, and special character
+  var passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-zA-Z]).{8,}$/;
+  return passwordRegex.test(password);
+}
+
+// Function to show error message
+function showError(input, message) {
+  var errorElement = input.parentElement.querySelector(".error");
+  if (!errorElement) {
+    errorElement = document.createElement("p");
+    errorElement.className = "error";
+    input.parentElement.appendChild(errorElement);
+  }
+  errorElement.innerHTML = message;
+  errorElement.style.color = "red"; // Set the error message color to red
+  input.classList.add("error-input");
+}
+
+// Function to clear error messages
+function clearErrors() {
+  var errorElements = document.querySelectorAll(".error");
+  errorElements.forEach(function (errorElement) {
+    errorElement.parentElement.removeChild(errorElement);
+  });
+
+  var inputElements = document.querySelectorAll("input");
+  inputElements.forEach(function (inputElement) {
+    inputElement.classList.remove("error-input");
+  });
+}
+
+// Function to handle form submission
+function handleFormSubmit(event) {
+  event.preventDefault(); // Prevent the form from being submitted
+
+  // Clear any previous error messages
+  clearErrors();
+
+  // Get the form inputs
+  var nameInput = document.getElementById("name");
+  var emailInput = document.getElementById("email");
+  var passwordInput = document.getElementById("password");
+
+  // Validate the Sign Up form
+  if (nameInput.value.trim() === "") {
+    showError(nameInput, "Name is required.");
+  }
+
+  if (emailInput.value.trim() === "") {
+    showError(emailInput, "Email address is required.");
+  } else if (!isValidEmail(emailInput.value.trim())) {
+    showError(emailInput, "Invalid email address.");
+  }
+
+  if (passwordInput.value.trim() === "") {
+    showError(passwordInput, "Password is required.");
+  } else if (!isValidPassword(passwordInput.value.trim())) {
+    showError(
+      passwordInput,
+      "Password must be at least 8 characters and contain a number and special character."
+    );
+  }
+
+  // Perform additional actions if the form is valid
+  if (!nameInput.classList.contains("error-input") &&
+    !emailInput.classList.contains("error-input") &&
+    !passwordInput.classList.contains("error-input")) {
+    // Form is valid, perform form submission or other actions
+    console.log("Form submitted successfully!");
+    // Add your form submission logic here
+  }
+}
+
+// Function to handle signup button click
+function handleSignupButtonClick() {
+  var nameField = document.getElementById("nameField");
+  var title = document.getElementById("title");
+  nameField.style.maxHeight = "60px";
+  title.innerHTML = "Sign Up";
+}
+
+
+
+// Attach event listeners
+document.getElementById("signupBtn").addEventListener("click", handleFormSubmit);
+document.getElementById("form").addEventListener("submit", handleFormSubmit);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savings</title>
+    <link rel="stylesheet" href="fonts-6/css/all.css">
+    <link rel="stylesheet" href="css/Savings.css">
+    <link rel="icon" href="images/MoneySmartImage.png">
+    <script src="js/Dashboard.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="sidenav">
+
+            <div class="menulogo">
+            <a href="#"><i class="fas fa-bars fa-2x"></i></a>      
+            <img src="images/MoneySmartImage.png" alt=""><p>
+            </div>
+            <a href="Dashboard.html"><div class="home">
+                <i class="fa fa-home fa-3x"></i>
+                <h2>Home</h2>
+            </div></a>
+
+            <a href="budget.html"><div class="budget">
+                 <i class="fas fa-wallet fa-3x"></i>
+                 <h2>Budget</h2>
+            </div></a>
+
+            <a href="Expenses.html"><div class="expenses">
+                <i class="fas fa-coins fa-3x"></i>
+                <h2>Expenses</h2>
+            </div></a>
+
+            <a href="Savings.html"><div class="savings">
+                <i class="fas fa-piggy-bank fa-3x"></i>
+                <h2>Savings</h2>
+            </div></a>
+
+            <a href="Income.html"><div class="income">
+                <i class="fas fa-sack-dollar fa-3x"></i>
+                <h2>Income</h2>
+            </div></a>
+
+            <div class="maincontent">
+                <h2>SAVINGS</h2>
+                <button onclick="openModal()">Add Savings</button>
+
+                <div id="modal-container">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <h2>Add Savings</h2>
+                        <form>
+                            <label for="date">Date:</label>
+                            <input type="date" id="date" name="date" required>
+                            <label for="category">Savings Category:</label>
+                            <input type="text" id="category" name="category" required>
+                            <label for="description">Description:</label>
+                            <input type="text" id="description" name="description" required>
+                            <label for="amount">Amount:</label>
+                            <input placeholder="&#x20A6;" type="number" id="amount" name="amount" min="0" step="0.01" required>
+                            <button style="margin: 20px; width: 170px; border-radius: 5px;" id="save-btn" type="submit">Save</button>
+                        </form>
+                    </div>
+                </div>
+        
+                <h2 style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; font-weight: lighter;">Filter Savings</h2>
+                <div class="filter-dropdown">
+                    <label for="date-range">Date Range:</label>
+                    <select id = "date range">
+                        <option value="all">All</option>
+                        <option value="last-week">Last week</option>
+                        <option value="last-month">Last Month</option>
+                        <option value="last-year">Last Year</option>
+                    </select>
+        
+                    <label for="savings-category">Savings Category:</label>
+                    <select id="savings-category">
+                        <option value="all">All</option>
+                        <option value="food">Education</option>
+                        <option value="transportation">Vacation</option>
+                        <option value="entertainment">Emergency Fund</option>
+                    </select>
+        
+                    <label for="search-bar">Search:</label>
+                    <input type="text" id="search-bar" placeholder="Search savings">
+                </div>
+        
+                <table id="savings-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Savings Category</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="third-section">
+                <div class="third-section-content">
+                <a href="#"><i class="fa fa-user"></i></a>
+                <a href="#" style="color:#6e258d;"><i class="fa fa-right-from-bracket"></i></a>
+                </div>
+            </div>
+    </div>
+    </div>
+    <script src="Savings.js"></script>
+    </body>

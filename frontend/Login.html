@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in | MoneySmart</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="images/MoneySmartImage.png">
+</head>
+<body>
+<div class="container">
+    <div class="card">
+      <h1 id="title">Log in</h1>
+      <form action="Form.php" method="post" class="form" id="form">
+        <div class="input-group">
+          <div id="message"></div>
+          <div class="input-field">
+            <i class="fa fa-envelope"></i>
+            <input type="email" placeholder="Email address" id="email" autocomplete="off">
+          </div>
+
+          <div class="input-field">
+            <i class="fa fa-lock"></i>
+            <input type="password" placeholder="Password" id="password">
+          </div>
+          <a href="ForgotPassword.html"><p class="forgot">Forgot Password</p></a>
+          <div class="btn-field">
+            <button type="button" class="disable" id="loginBtn">Log in</button>
+          </div>
+          <p>Don't have an account? <a href="SignUp.html">Sign Up</a></p>
+        </div>
+
+      </form>
+    </div>
+</div>
+
+<script>
+    // Function to validate the login form
+function validateLoginForm() {
+  var emailInput = document.getElementById("email");
+  var passwordInput = document.getElementById("password");
+
+  // Clear any previous error messages
+  clearErrors();
+
+  // Validate the Login form
+  if (emailInput.value.trim() === "") {
+    showError(emailInput, "Email address is required.");
+  } else if (!isValidEmail(emailInput.value.trim())) {
+    showError(emailInput, "Invalid email address.");
+  }
+
+  if (passwordInput.value.trim() === "") {
+    showError(passwordInput, "Password is required.");
+  } else if (!isValidPassword(passwordInput.value.trim())) {
+    showError(
+      passwordInput,
+      "Password must be at least 8 characters and contain a number and special character."
+    );
+  }
+
+  // Perform additional actions if the form is valid
+  if (!emailInput.classList.contains("error-input") &&
+    !passwordInput.classList.contains("error-input")) {
+    // Form is valid, perform login or other actions
+    console.log("Login successful!");
+    // Add your login logic here
+  }
+}
+
+// Function to check if email is valid
+function isValidEmail(email) {
+  // Add email validation logic
+  // For example, you can use a regular expression pattern
+  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
+
+// Function to check if password is valid
+function isValidPassword(password) {
+  // Add password validation logic
+  // For example, check for minimum length, number, and special character
+  var passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-zA-Z]).{8,}$/;
+  return passwordRegex.test(password);
+}
+
+// Function to show error message
+function showError(input, message) {
+  var errorElement = input.parentElement.querySelector(".error");
+  if (!errorElement) {
+    errorElement = document.createElement("p");
+    errorElement.className = "error";
+    input.parentElement.appendChild(errorElement);
+  }
+  errorElement.innerHTML = message;
+  errorElement.style.color = "red"; // Set the error message color to red
+  input.classList.add("error-input");
+}
+
+// Function to clear error messages
+function clearErrors() {
+  var errorElements = document.querySelectorAll(".error");
+  errorElements.forEach(function (errorElement) {
+    errorElement.parentElement.removeChild(errorElement);
+  });
+
+  var inputElements = document.querySelectorAll("input");
+  inputElements.forEach(function (inputElement) {
+    inputElement.classList.remove("error-input");
+  });
+}
+
+// Attach event listener to the login button
+document.getElementById("loginBtn").addEventListener("click", validateLoginForm);
+
+</script>
+</body>
+</html>

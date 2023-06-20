@@ -1,0 +1,491 @@
+:root{
+    --font-color:#FFFFFF;
+    --button-color:#ac6cc7;
+    --button-dark-color: #6e258d;
+    --box-shadow: #dddddd;
+    --heading-color:#201F20;
+    --card: #3a3a3a;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0px 0px 0px 30px;
+    padding: 0px;
+}
+
+body{
+    background-color: var(--heading-color);
+    margin: 0;
+}
+
+.sidenav{
+    border-right: 1px solid white;
+    width: 400px;
+    height: 100%;
+    left: 30px;
+}
+
+
+.fa-bars{
+    color: var(--button-color);
+    font-size: 25px;
+}
+
+.fa-bars:hover{
+    color: var(--button-dark-color);
+}
+
+.menulogo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.menulogo img{
+    margin: 0px 0px 0px 15px;
+    width: 140px;
+    height: 140px;
+}
+
+
+.sidenav a{
+    text-decoration: none;
+    color: var(--button-color);
+}
+
+.sidenav a:hover{
+    text-decoration: none;
+}
+
+
+.home{
+    border-radius: 15px 15px 15px 0px;
+    display: flex;
+    align-items: center;
+    padding: 5px 0px 3px 20px;
+    width: 150px;
+    height: 35px;
+    margin-bottom: 60px;
+    transition: all 0.3s ease;
+}
+
+.home:hover{
+    background-color: white;  
+    margin-left: 10px;  
+}
+
+.fa-home{
+    color: var(--button-color);
+    margin-right: 40px;
+    font-size: 20px;
+}
+
+
+.home h2{
+    color: var(--button-color);
+    font-size: 20px;
+    font-weight: 200;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
+}
+
+.budget{
+    border-radius: 15px 15px 15px 0px;
+    display: flex;
+    align-items: center;
+    padding: 3px 0px 3px 20px;
+    width: 150px;
+    height: 35px;
+    margin-bottom: 60px;
+    transition: all 0.3s ease;
+}
+
+.budget:hover{
+    background-color: white;  
+    margin-left: 10px;
+}
+
+.fa-wallet{
+    color: var(--button-color);
+    margin-right: 40px;
+    font-size: 20px;
+}
+
+.budget h2{
+    color: var(--button-color);
+    font-size: 20px;
+    font-weight: 200;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
+}
+
+.expenses{
+    border-radius: 15px 15px 15px 0px;
+    display: flex;
+    align-items: center;
+    padding: 3px 0px 3px 20px;
+    width: 150px;
+    height: 35px;
+    margin-bottom: 60px;
+    transition: all 0.3s ease;
+}
+
+.expenses:hover{
+    background-color: white;  
+    margin-left: 10px;
+}
+
+.fa-coins{
+    color: var(--button-color);
+    margin-right: 40px;
+    font-size: 20px;
+}
+
+.expenses h2{
+    color: var(--button-color);
+    font-size: 20px;
+    font-weight: 200;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
+
+.savings{
+    border-radius: 15px 15px 15px 0px;
+    display: flex;
+    align-items: center;
+    padding: 3px 0px 3px 20px;
+    width: 170px;
+    height: 35px;
+    margin-bottom: 60px;
+    transition: all 0.3s ease;
+}
+
+.savings:hover{
+    background-color: white;
+    margin-left: 10px;
+}
+
+.fa-piggy-bank{
+    color: var(--button-color);
+    margin-right: 40px;
+    font-size: 20px;
+}
+
+.savings h2{
+    color: var(--button-color);
+    font-size: 20px;
+    font-weight: 200;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
+
+.income{
+    border-radius: 15px 15px 15px 0px;
+    display: flex;
+    align-items: center;
+    padding: 3px 0px 3px 20px;
+    width: 170px;
+    height: 35px;
+    margin-bottom: 60px;
+    transition: all 0.3s ease;
+}
+
+.income:hover{
+    background-color: white;
+    margin-left: 10px;
+}
+
+.fa-sack-dollar{
+    color: var(--button-color);
+    margin-right: 40px;
+    font-size: 20px;
+}
+
+.income h2{
+    color: var(--button-color);
+    font-size: 20px;
+    font-weight: 200;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
+
+.maincontent{
+    position: fixed;
+    top: 0;
+    left: 250px; /* adjust left value to avoid overlapping with sidenav */
+    height: 100%;
+    width: calc(100% - 550px); /* adjust width to account for sidenav width */
+    background-color: rgb(255, 254, 254);
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 40px;
+    z-index: 1;
+    overflow-y: scroll;
+}
+
+.maincontent::-webkit-scrollbar {
+    display: none;
+  }
+
+.maincontent h1{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 28px;
+}
+
+.maincontent p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    margin-top: -10px;
+    margin-bottom: 60px;
+}
+
+.MONEY{
+    display: flex;
+    gap: 120px;
+}
+
+.balance{
+    background-image: url(/images/balancemoney2.png);
+    background-image: linear-gradient(to right, #6e258d, #a64ccc);
+    background-repeat: no-repeat;
+    background-size: auto;
+    box-shadow: 1px 2px 3px 1px rgb(90, 89, 89);
+    width: 240px;
+    height: 150px;
+    border-radius: 10px 10px 10px 0px;
+    margin-bottom: 30px;
+}
+
+.balance:hover{
+    background-image: linear-gradient(to left, #54196d, #a64ccc);
+}
+
+.balance .fa-piggy-bank{
+    color: #201f20;
+    font-size: 30px;
+    margin-top: 65px;
+    margin-left: 20px;
+}
+
+.money-block{
+    display: block;
+    text-align: center;
+}
+
+.balance-heading p{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #faf6f6;
+    margin-top: -50px;
+    margin-bottom: 30px;
+}
+
+.balance-money p{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+
+.income2{
+    background-image: url(/images/balancemoney2.png);
+    background-image: linear-gradient(to right, #3f0b55, #6d208b);
+    background-repeat: no-repeat;
+    background-size: auto;
+    box-shadow: 1px 2px 3px 1px rgb(90, 89, 89);
+    width: 240px;
+    height: 150px;
+    border-radius: 10px 10px 10px 0px;
+    margin-bottom: 30px;
+    margin-left: -100px;
+}
+
+.income2 .fa-sack-dollar{
+    color: #faf6f6;
+    font-size: 30px;
+    margin-top: 65px;
+    margin-left: 20px;
+}
+
+.money-block{
+    display: block;
+    text-align: center;
+}
+
+.income-heading p{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #faf6f6;
+    margin-top: -50px;
+    margin-bottom: 30px;
+}
+
+.income-money p{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+
+.expense{
+    background-image: url(/images/balancemoney2.png);
+    background-image: linear-gradient(to right, #6e258d, #a64ccc);
+    background-repeat: no-repeat;
+    background-size: auto;
+    box-shadow: 1px 2px 3px 1px rgb(90, 89, 89);
+    width: 240px;
+    height: 150px;
+    border-radius: 10px 10px 10px 10px;
+    margin-bottom: 30px;
+    margin-left: -100px;
+}
+
+.expense .fa-coins{
+    color: #201f20;
+    font-size: 30px;
+    margin-top: 65px;
+    margin-left: 20px;
+}
+
+.money-block{
+    display: block;
+    text-align: center;
+}
+
+.expense-heading p{
+    font-size: 16px;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #faf6f6;
+    margin-top: -50px;
+    margin-bottom: 30px;
+}
+
+.expense-money p{
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+
+.budget-progress{
+    height: 50px;
+    width: 525px;
+    padding: 20px;
+    padding-bottom: 40px;
+    background-color: #201f20;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    box-shadow: 1px 2px 3px 1px rgb(75, 74, 74);
+}
+
+.budget-progress p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    font-weight: bolder;
+    margin: 5px 0px 10px 5px;
+}
+
+.progress-bar-container{
+    background-color: rgb(238, 234, 234);
+    width: 80%;
+    border-radius: 15px;
+}
+
+.progress-bar{
+    width: 70%;
+    height: 100%;
+    background-image: url(/images/balancemoney2.png);
+    background-image: linear-gradient(to right, #6e258d, #a64ccc);
+    border-radius: 15px 20px 20px 15px;
+    transition: width .3s ease-in-out;
+}
+
+.progress-bar p{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.recentactivity{
+    margin-top: 70px;
+}
+
+.recent-activity{
+    border: 1px solid black;
+    width: 650px;
+    border-radius: 15px;
+    height: 100px;
+    margin-bottom: 30px;
+}
+
+.recent-activity .fa{
+    border-radius: 50%;
+    background-color: #6e258d;
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    width: 48px;
+    height: 48px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+.recent-activity-text{
+    display: block;
+    margin-left: 100px;
+    margin-top: -40px;
+}
+
+.third-section{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px; /* or any desired width */
+    height: 100%; /* or any desired height */
+    background-color: rgb(255, 254, 254);
+    padding: 5px;
+    z-index: 0;
+}
+
+
+.third-section-content .fa-user{
+    color: white;
+    background-color: #6e258d;
+    border-radius: 50%;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    margin-bottom: 20px;
+    margin-left: 220px;
+    margin-top: 40px;
+}
+
+.third-section-content .fa-user:hover{
+    background-color: #3f0b55;
+}
+
+.third-section-content .fa-right-from-bracket{
+    color: white;
+    background-color: #6e258d;
+    border-radius: 50%;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: inline-flex;
+    margin-left: 220px;
+}
+
+.third-section-content .fa-right-from-bracket:hover{
+    background-color: #3f0b55;
+}
